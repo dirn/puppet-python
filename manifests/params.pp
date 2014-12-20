@@ -15,7 +15,7 @@ class python::params {
     }
   }
 
-  $pyenv_version = 'v20141012'
+  $pyenv_version = 'v20141211'
 
   $pyenv_plugins = {
     'pyenv-pip-rehash' => {
