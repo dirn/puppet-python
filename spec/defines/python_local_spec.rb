@@ -14,17 +14,17 @@ describe "python::local" do
   context 'ensure => present' do
     let(:params) do
       {
-        :version => '2.7.6'
+        :version => '3.4.2'
       }
     end
 
     it do
-      should contain_python__version('2.7.6')
+      should contain_python__version('3.4.2')
 
       should contain_file('/tmp/.pyenv-version').with_ensure('absent')
       should contain_file('/tmp/.python-version').with({
         :ensure  => 'present',
-        :content => "2.7.6\n",
+        :content => "3.4.2\n",
         :replace => true,
       })
     end

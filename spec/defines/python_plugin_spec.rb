@@ -7,7 +7,7 @@ describe 'python::plugin' do
 
   let(:params) do
     {
-      :ensure => "v20140123",
+      :ensure => "v20141211",
       :source => "yyuu/pyenv-virtualenv",
     }
   end
@@ -16,7 +16,7 @@ describe 'python::plugin' do
     should include_class("python")
 
     should contain_repository("/test/boxen/pyenv/plugins/pyenv-virtualenv").with({
-      :ensure => "v20140123",
+      :ensure => "v20141211",
       :source => "yyuu/pyenv-virtualenv"
     })
   end

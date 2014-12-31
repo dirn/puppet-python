@@ -2,10 +2,10 @@
 #
 # Usage:
 #
-#   class { 'python::global': version => '2.7.3' }
+#   class { 'python::global': version => '3.4.2' }
 #
 
-class python::global($version = '2.7.6') {
+class python::global($version = '3.4.2') {
   include python
 
   if $version != 'system' {

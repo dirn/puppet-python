@@ -6,7 +6,7 @@ describe 'python' do
   let(:default_params) do
     {
       :pyenv_plugins    => {},
-      :pyenv_version    => 'v20140615',
+      :pyenv_version    => 'v20141211',
       :pyenv_root       => '/test/boxen/pyenv',
       :user             => 'boxenuser',
     }
@@ -23,7 +23,7 @@ describe 'python' do
     })
 
     should contain_repository('/test/boxen/pyenv').with({
-      :ensure => 'v20140615',
+      :ensure => 'v20141211',
       :source => 'yyuu/pyenv',
       :user   => 'boxenuser',
     })
@@ -59,7 +59,7 @@ describe 'python' do
       default_params.merge(
         :pyenv_plugins => {
           'pyenv-virtualenv' => {
-            'ensure' => 'v20140123',
+            'ensure' => 'v20141211',
             'source' => 'yyuu/pyenv-virtualenv',
           }
         }
@@ -68,7 +68,7 @@ describe 'python' do
 
     it do
       should contain_python__plugin('pyenv-virtualenv').with({
-        :ensure => 'v20140123',
+        :ensure => 'v20141211',
         :source => 'yyuu/pyenv-virtualenv',
       })
     end

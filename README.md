@@ -8,35 +8,35 @@ Install Python versions using [pyenv](https://github.com/yyuu/pyenv). Module bas
 
 ```puppet
 # Install Python versions
-python::version { '2.7.7': }
-python::version { '3.4.1': }
+python::version { '2.7.9': }
+python::version { '3.4.2': }
 
 # Set the global version of Python
 class { 'python::global':
-  version => '2.7.7'
+  version => '2.7.9'
 }
 
 # ensure a certain python version is used in a dir
 python::local { '/path/to/some/project':
-  version => '3.4.1'
+  version => '3.4.2'
 }
 
 # Install the latest version of virtualenv
-$version = '3.4.1'
+$version = '3.4.2'
 python::package { "virtualenv for ${version}":
   package => 'virtualenv',
   python  => $version,
 }
 # Install Django 1.6.x
-python::package { "django for 2.7.7":
+python::package { "django for 3.4.2":
   package => 'django',
-  python  => '2.7.7',
+  python  => '3.4.2',
   version => '>=1.6,<1.7',
 }
 
 # Installing a pyenv plugin
 python::plugin { 'pyenv-virtualenvwrapper':
-  ensure => 'v20140122',
+  ensure => 'v20141211',
   source => 'yyuu/pyenv-virtualenvwrapper',
 }
 

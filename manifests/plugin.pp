@@ -5,7 +5,7 @@
 # Usage:
 #
 #   python::plugin { 'pyenv-version':
-#     ensure => 'v20140110.1',
+#     ensure => 'v20141211',
 #     source => 'yyuu/pyenv-virtualenv'
 #   }
 #
